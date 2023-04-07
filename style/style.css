@@ -23,6 +23,11 @@
     font-weight: 600;
 }
 
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
 .menu>ul {
     list-style: none;
     display: flex;
@@ -30,6 +35,20 @@
     gap: 20px;
 }
 
+
+
+.menu>li:hover {
+    background-color: #515051;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu>:nth-child(1):hover {
+    background-color: black;
+    padding: 0;
+    font-size: 25px;
+}
 
 .menu>ul li:nth-child(2) {
     width: 130px;
@@ -43,6 +62,11 @@
 
 .menu li:nth-child(1) {
     font-size: 23.4628px;
+}
+
+.phone {
+    display: flex;
+    gap: 5px;
 }
 
 
@@ -89,22 +113,25 @@
     margin-bottom: 15px;
 }
 
-.black,
-.green {
+.black>a,
+.green>a {
+    text-decoration: none;
     font-size: 14px;
-    color: white;
-    padding: 12px 24px;
     font-weight: 600;
-    border-radius: 4px;
+    color: white;
 }
 
 .black {
     background-color: #1F1815;
+    padding: 12px 24px;
+    border-radius: 4px;
 }
 
 .green {
     background-color: #2A5B45;
+    padding: 12px 24px;
     margin-left: 15px;
+    border-radius: 4px;
 }
 
 
@@ -121,7 +148,7 @@
     gap: 30px;
     text-align: center;
     padding: 48px 147px;
-    background-image: url("../img/cafe.jpg");
+    background-image: url("../img/cafeDeFondo.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -452,7 +479,6 @@
 
 
 /* ******************************** footer ********************** */
-
 .footer {
     background-color: #1F1815;
     color: white;
@@ -463,10 +489,24 @@
     gap: 20px;
 }
 
+
 .footer h2 {
     font-weight: 400;
     font-size: 23px;
     margin: 30px 0px 0px 40px;
+}
+
+.footer h2>a {
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+.footer h2>a:hover {
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
 }
 
 .footer>:nth-child(2) {
@@ -504,6 +544,15 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.others-links>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.others-links>li>a:hover {
+    text-decoration: underline;
 }
 
 .footer> :nth-child(3) {

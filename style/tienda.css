@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+
+/* ******************************************** header *******************************************/
+
+/* ***************menu********** */
+.menu {
+    list-style: none;
+    background-color: black;
+    color: white;
+    height: 64px;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu>ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.menu>:nth-child(2) {
+    background-color: #515051;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.menu>li:hover {
+    background-color: #515051;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu>:nth-child(1):hover {
+    background-color: black;
+    padding: 0;
+    font-size: 25px;
+}
+
+.menu>ul li:nth-child(2) {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #515051;
+    border-radius: 4px;
+}
+
+.menu li:nth-child(1) {
+    font-size: 23.4628px;
+}
+
+.phone {
+    display: flex;
+    gap: 5px;
+}
+
+/* ******************************************** body *******************************************/
+
+.article {
+    padding-top: 30px;
+}
+
+.article>h2 {
+    text-align: center;
+    color: #2A5B45;
+    font-weight: 500;
+}
+
+/* *************** sacos ********** */
+
+
+
+.card-sacos {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.sacos {
+    width: 282px;
+    height: 391.39px;
+    border: solid #E3DED7 1px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.sacos>h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sacos>button {
+    color: white;
+    background-color: rgba(42, 91, 69, 0.7);
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.sacos>button:hover {
+    cursor: pointer;
+}
+
+.sacos:hover {
+    background-color: #E3DED7;
+}
+
+.sacos:last-child {
+    opacity: 0.6;
+}
+
+.sacos:last-child>button {
+    background-color: #be955b;
+}
+
+
+/************* cafe con mejores condiciones **********/
+
+.mejores-condiciones {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 48px 147px;
+    background-image: url("../img/cafeDeFondo.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+
+}
+
+.mejores-condiciones>h2 {
+    color: white;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+}
+
+.cards>div {
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 24px;
+    width: 316px;
+    height: 232px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: #2A5B45;
+    border-radius: 20px;
+}
+
+
+
+/* ******************************** footer ********************** */
+
+.footer {
+    background-color: #1F1815;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.footer h2 {
+    font-weight: 400;
+    font-size: 23px;
+    margin: 30px 0px 0px 40px;
+}
+
+.footer h2>a {
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+.footer h2>a:hover {
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.footer>:nth-child(2) {
+    margin: 0px 0px 20px 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 360px;
+}
+
+
+.help {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.help>p {
+    background-color: #515051;
+    display: flex;
+    gap: 10px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+
+.others-links {
+    height: 150px;
+    width: 470px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.others-links>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.others-links>li>a:hover {
+    text-decoration: underline;
+}
+
+.footer> :nth-child(3) {
+    background-color: #2B2A2B;
+    padding: 15px;
+    text-align: center;
+}
