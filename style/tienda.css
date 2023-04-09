@@ -22,6 +22,21 @@
     font-weight: 600;
 }
 
+.acuCesta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #515051;
+    border-radius: 50%;
+}
+
+.menu>li:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 
 .menu li a {
     color: white;
@@ -76,11 +91,11 @@
 
 /* ******************************************** body *******************************************/
 
-.article {
+.ultimos-origenes {
     padding-top: 30px;
 }
 
-.article>h2 {
+.ultimos-origenes>h2 {
     text-align: center;
     color: #2A5B45;
     font-weight: 500;

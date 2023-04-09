@@ -23,6 +23,22 @@
     font-weight: 600;
 }
 
+.acuCesta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #515051;
+    border-radius: 50%;
+}
+
+.menu>li:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
 .menu li a {
     color: white;
     text-decoration: none;
