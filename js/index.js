@@ -1,3 +1,43 @@
+// FUNCIONALIDAD A PREGUNTAS FRECUENTES EN index.html
+
+const querysIndex = document.querySelectorAll(".querys");
+for (let query of querysIndex) {
+    query.addEventListener("click", () => {
+        if (query.children[1].style.display == "block") {
+            query.children[1].style.display = "none";
+            query.children[0].children[0].src = "img/desplieguebajo.svg";
+        } else {
+            query.children[1].style.display = "block";
+            query.children[0].children[0].src = "img/despligue.svg";
+        }
+    })
+}
+
+
+// FUNCIONALIDAD A FORMULARIO EN index.html
+
+if (document.URL.includes("index.html")) {
+    const form = document.querySelector("#formulario");
+    const containt = document.querySelector("#contactUs");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        form.style.display = "none";
+        let div = document.createElement("div");
+        let h2e = document.createElement("h2");
+        let button = document.createElement("button");
+        h2e.innerText = "Formulario enviado con éxito";
+        button.innerText = "Nuevo formulario";
+        button.addEventListener("click", () => {
+            document.location.reload();
+
+        })
+        div.classList = "formulario-enviado";
+        div.append(h2e, button);
+        containt.append(div);
+    })
+}
+
 
 
 // CREANDO FUNCION PARA INSERTAR EN LOCALSTORAGE
@@ -38,12 +78,12 @@ const modifyElementLocalStorage = (key, op) => {
     }
     localStorage.setItem(key, JSON.stringify(object));
     reload();
+    totalCarrito();
 }
 
 // CREANDO FUNCION PARA MODIFICAR UN PRECIO
 
 const modifyPrice = (stringPrice) => {
-    console.log(stringPrice);
     return parseFloat(stringPrice.replace(",", ".").replace("€", ""));
 }
 
@@ -85,6 +125,44 @@ const reload = () => {
 }
 reload();
 
+
+// FUNCION PARA RECUPERAR
+// const inputRadioNormal = document.querySelector(`input[name="envio"]:checked`);
+const costeEnvio = (elemento) => {
+    const inputRadioNormal = document.querySelectorAll("input[name='envio']");
+    for (let radio of inputRadioNormal) {
+        radio.addEventListener("input", (event) => {
+            event.preventDefault();
+            elemento.innerText = event.target.value;
+            totalCarrito();
+        })
+    }
+
+}
+
+
+// MODIFICANDO TOTAL DEL CARRITO
+const sectionTotalCarrito = document.querySelector("#total-carrito");
+const sectionSubTotalCarrito = document.querySelector("#subtotal");
+const totalCarrito = () => {
+    let subtotal = 0;
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let item = JSON.parse(localStorage.getItem(key));
+        subtotal = subtotal + modifyPrice(item.price);
+    }
+
+    sectionTotalCarrito.children[1].children[2].innerText = subtotal + ",00 €";
+    costeEnvio(sectionTotalCarrito.children[1].children[3]);
+    if (sectionTotalCarrito.children[1].children[3].innerText === "GRATIS") {
+        sectionTotalCarrito.children[2].children[0].innerText = subtotal + ",00 €"
+        sectionTotalCarrito.children[2].children[1].innerText = `Incluye ${Math.round((subtotal * 0.21) * 100) / 100} € de IVA`.replace(".", ",");
+    } else {
+        sectionTotalCarrito.children[2].children[0].innerText = (subtotal + 9) + ",00 €"
+        sectionTotalCarrito.children[2].children[1].innerText = `Incluye ${Math.round(((subtotal + 9) * 0.21) * 100) / 100} € de IVA`.replace(".", ",");
+
+    }
+}
 
 
 //ENLACE A pagina cesta.html
@@ -163,13 +241,18 @@ if (document.URL.includes("cesta.html")) {
 
     }
 
+    //ACTUALIZAR TOTAL CARRITO
+    totalCarrito();
 
-
-
-
-
-
-
+    //AÑADIENDO EVENTO A BUTTON CHECKOUT
+    const buttonCheck = document.querySelector("#buttons").children[0];
+    if (localStorage.length < 1) {
+        buttonCheck.style.opacity = "0.5";
+    } else {
+        buttonCheck.addEventListener("click", () => {
+            location.href = "../pages/checkout.html";
+        })
+    }
 
 
 }

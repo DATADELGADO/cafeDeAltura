@@ -2,45 +2,45 @@
 <html lang="en">
 
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../style/cesta.css">
-      <title>Cesta</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/cesta.css">
+    <title>Cesta</title>
 </head>
 
 <body>
-      <!-- *************************** header ************************* -->
-      <header>
-            <ul class="menu">
-                  <li><a href="../index.html">cafedealtura.com <img src="../img/cafe.svg" alt=""></a></li>
-                  <li><a href="../pages/tienda.html">Tienda</a></li>
-                  <li>Suscripción</li>
-                  <li>Para empresas</li>
-                  <li>Sobre nosotros</li>
-                  <li><a href="../index.html#contactUs">Contacto</a></li>
-                  <ul>
-                        <li class="phone"><img src="../img/phoneWhite.svg" alt=""> +34 919 49 05 18</li>
-                        <li>Iniciar sesión</li>
-                  </ul>
-                  <li id="cesta"><img src="../img/cesta.svg" alt=""><label class="count-cesta"></label></li>
+    <!-- *************************** header ************************* -->
+    <header>
+        <ul class="menu">
+            <li><a href="../index.html">cafedealtura.com <img src="../img/cafe.svg" alt=""></a></li>
+            <li><a href="../pages/tienda.html">Tienda</a></li>
+            <li>Suscripción</li>
+            <li>Para empresas</li>
+            <li>Sobre nosotros</li>
+            <li><a href="../index.html#contactUs">Contacto</a></li>
+            <ul>
+                <li class="phone"><img src="../img/phoneWhite.svg" alt=""> +34 919 49 05 18</li>
+                <li>Iniciar sesión</li>
             </ul>
-      </header>
+            <li id="cesta"><img src="../img/cesta.svg" alt=""><label class="count-cesta"></label></li>
+        </ul>
+    </header>
 
-      <!-- *************************** body ************************* -->
+    <!-- *************************** body ************************* -->
 
 
-      <article id="content">
-            <h2 id="title-cesta"></h2>
-            <section id="content-body">
-                  <!-- PRODUCTOS Y ENVIOS -->
-                  <section id="product-envio">
-                        <!-- PRODUCTOS -->
-                        <div id="productos">
-                              <h3>Productos</h3>
+    <article id="content">
+        <h2 id="title-cesta"></h2>
+        <section id="content-body">
+            <!-- PRODUCTOS Y ENVIOS -->
+            <section id="product-envio">
+                <!-- PRODUCTOS -->
+                <div id="productos">
+                    <h3>Productos</h3>
 
-                              <!-- ESQUEMA DE CREACIÓN DE ELEMENTOS EN EL JS -->
-                              <!-- <section class="coffe-cesta">
+                    <!-- ESQUEMA DE CREACIÓN DE ELEMENTOS EN EL JS -->
+                    <!-- <section class="coffe-cesta">
                                     <div class="coffe-content">
                                           <label class="resta">-</label>
                                           <p>1</p>
@@ -53,62 +53,62 @@
                                     </div>
                                     <h3 class="price">9,00 €</h3>
                               </section> -->
-                        </div>
+                </div>
 
-                        <!-- SELECCIONAR ENVIO -->
-                        <div id="envio">
-                              <h3>Seleccionar envío</h3>
-                              <section class="envio-normal">
-                                    <div>
-                                          <input type="radio">
-                                          <div>
-                                                <label>Envío 5-7 dias</label>
-                                                <p>Opción estándar sin seguimiento</p>
-                                          </div>
-                                    </div>
-                                    <h3>GRATIS</h3>
-                              </section>
-                              <section class="envio-urgente">
-                                    <div>
-                                          <input type="radio">
-                                          <div>
-                                                <label>Envío urgente 24h</label>
-                                                <p>Recibe tu pedido en las siguientes 24h (Para pedidos realizados antes
-                                                      de
-                                                      las 13:00).</p>
-                                          </div>
-                                    </div>
-                                    <h3>9,00 €</h3>
-                              </section>
+                <!-- SELECCIONAR ENVIO -->
+                <div id="envio">
+                    <h3>Seleccionar envío</h3>
+                    <section class="envio-normal">
+                        <div>
+                            <input type="radio" id="envio-normal" name="envio" value="GRATIS" checked>
+                            <div>
+                                <label>Envío 5-7 dias</label>
+                                <p>Opción estándar sin seguimiento</p>
+                            </div>
                         </div>
-                  </section>
-
-                  <!-- TOTAL CARRITO -->
-                  <section id="total-carrito">
-                        <h3>Total del carrito</h3>
-                        <div id="subtotal">
-                              <p>SUBTOTAL</p>
-                              <p>ENVÍO</p>
-                              <p>18,00 €</p>
-                              <p>GRATIS</p>
+                        <h3>GRATIS</h3>
+                    </section>
+                    <section class="envio-urgente">
+                        <div>
+                            <input type="radio" id="envio-urgente" name="envio" value="9,00 €">
+                            <div>
+                                <label>Envío urgente 24h</label>
+                                <p>Recibe tu pedido en las siguientes 24h (Para pedidos realizados antes
+                                    de
+                                    las 13:00).</p>
+                            </div>
                         </div>
-                        <div id="total">
-                              <p>18,00 €</p>
-                              <p>Incluye 3,78€ de IVA</p>
-                              <p>TOTAL</p>
-                        </div>
-                        <div id="buttons">
-                              <button>Ir al checkout</button>
-                              <a href="../pages/tienda.html">Seguir comprando</a>
-                        </div>
-                  </section>
+                        <h3>9,00 €</h3>
+                    </section>
+                </div>
             </section>
-      </article>
-      <footer>
-            <p>Todos los derechos reservados - Café de Altura SL - 2022</p>
-      </footer>
 
-      <script src="../js/index.js"></script>
+            <!-- TOTAL CARRITO -->
+            <section id="total-carrito">
+                <h3>Total del carrito</h3>
+                <div id="subtotal">
+                    <p>SUBTOTAL</p>
+                    <p>ENVÍO</p>
+                    <p></p>
+                    <p>GRATIS</p>
+                </div>
+                <div id="total">
+                    <p>18,00 €</p>
+                    <p></p>
+                    <p>TOTAL</p>
+                </div>
+                <div id="buttons">
+                    <button>Ir al checkout</button>
+                    <a href="../pages/tienda.html">Seguir comprando</a>
+                </div>
+            </section>
+        </section>
+    </article>
+    <footer>
+        <p>Todos los derechos reservados - Café de Altura SL - 2022</p>
+    </footer>
+
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

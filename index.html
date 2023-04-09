@@ -113,13 +113,13 @@
         <section class="questions">
             <h2>Preguntas frecuentes</h2>
             <div class="querys">
-                <h3>¿Cómo hago el pedido?<img src="img/despligue.svg" alt=""></h3>
+                <h3>¿Cómo hago el pedido?<img src="img/desplieguebajo.svg" alt=""></h3>
                 <p>Selecciona el café que desees probar y completa el proceso de compra. Si lo prefieres, te
                     preguntaremos cada cuánto
                     quieres que te lo mandemos a casa y así nunca te quedarás sin café.</p>
             </div>
             <div class="querys">
-                <h3>¿Por qué los precios son tan bajos?<img src="img/despligue.svg" alt=""></h3>
+                <h3>¿Por qué los precios son tan bajos?<img src="img/desplieguebajo.svg" alt=""></h3>
                 <p>Viajamos constantemente para encontrar los mejores granos y a los agricultores más exigentes. Si
                     podemos ofrecerte estos
                     precios es porque tratamos directamente con los productores de café, sin intermediarios. Así
@@ -128,7 +128,7 @@
             </div>
             <div class="querys">
                 <h3>¿Es posible enviar café a mi oficina?<img src="img/desplieguebajo.svg" alt=""></h3>
-
+                <p>Si es posible.</p>
             </div>
             <p><a href="">Resolvemos tus dudas</a>&nbsp;&nbsp;&nbsp;<img src="img/flecha-blanca.svg" alt=""></p>
         </section>
@@ -168,21 +168,24 @@
                 <p>¿Buscas un trabajo? <a href="">Ver nuestras ofertas.</a></p>
             </div>
 
-            <form action="">
+            <!-- formulario -->
+
+            <form action="" id="formulario">
                 <label for="">Nombre completo</label>
-                <input type="text">
+                <input type="text" required pattern="[a-zA-Z\s]+">
                 <label for="">Email</label>
-                <input type="text">
+                <input type="text" required pattern="[a-zA-Z0-9\.-_]+@[a-zA-Z]+\.com">
                 <label for="">Teléfono</label>
                 <div>
                     <select name="" id="">
                         <option value="US">US</option>
                     </select>
-                    <input type="text" placeholder="+1 (555) 987-6543">
+                    <input type="text" placeholder="+1 (555) 987-6543" required pattern="\+[0-9\s\-]+">
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="¿En qué podemos ayudarte?"></textarea>
-                <p class="terminos"><input type="checkbox"> Acepto la <a href="">Política de Privacidad</a> y los <a
-                        href="">Términos y
+                <textarea name="" id="" cols="30" rows="10" placeholder="¿En qué podemos ayudarte?" required
+                    pattern="[0-9a-zA-z\s\.-_+/*#]+"></textarea>
+                <p class="terminos"><input type="checkbox" required> Acepto la <a href="">Política de Privacidad</a> y
+                    los <a href="">Términos y
                         condiciones.</a>
                 </p>
                 <input type="submit">

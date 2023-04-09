@@ -302,6 +302,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 16px;
+    cursor: pointer;
 }
 
 .querys>h3 {
@@ -317,6 +318,7 @@
     font-size: 12px;
     font-weight: 400px;
     color: #2B2A2B;
+    display: none;
 }
 
 
@@ -492,6 +494,23 @@
     border: solid 1px #D1D5DB;
 }
 
+.formulario-enviado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 200px;
+    background-color: white;
+}
+
+.formulario-enviado>button {
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #2A5B45;
+    padding: 12px 24px;
+}
 
 
 /* ******************************** footer ********************** */
